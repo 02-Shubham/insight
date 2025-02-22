@@ -67,7 +67,7 @@
 //     </div>
 //   );
 // }
-import { ArrowRight, Heart, Shield, Stethoscope, Users } from "lucide-react"
+import { ArrowRight, ClipboardPlus, Shield, Stethoscope, Users } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -86,12 +86,12 @@ export default async function Home() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-sky-50">
+    <div className="flex flex-col min-h-screen bg-gray-50">
       <header className="bg-white border-b shadow-sm">
-        <div className="container flex items-center justify-between h-20 px-6">
-          <div className="flex items-center gap-3">
-            <Heart className="w-7 h-7 text-sky-500" />
-            <span className="text-2xl font-extrabold text-gray-900">InsightCare</span>
+        <div className="container flex items-center justify-between h-16 px-6">
+          <div className="flex items-center gap-2">
+            <Heart className="h-6 w-6 text-[#2892D7]" />
+            <span className="text-[#2892D7] text-xl font-extrabold text-gray-900">InsightCare</span>
           </div>
           {userId ? (
             <Link href={`/${role}`}>
@@ -100,10 +100,10 @@ export default async function Home() {
           ) : (
             <div className="flex items-center gap-4">
               <Link href="/sign-in">
-                <Button variant="ghost" className="hover:text-sky-500">Sign In</Button>
+                <Button variant="ghost" className="hover:text-[#2892D7]">Sign In</Button>
               </Link>
               <Link href="/sign-up">
-                <Button className="text-white bg-sky-500 hover:bg-sky-700">Get Started</Button>
+                <Button className="bg-[#2892D7] text-white hover:bg-[#2892D7]">Get Started</Button>
               </Link>
             </div>
           )}
@@ -112,10 +112,10 @@ export default async function Home() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="container flex flex-col items-center px-6 py-32 text-center lg:flex-row lg:text-left bg-gradient-to-b from-sky-50 to-white">
-          <div className="flex-1 space-y-8">
-            <h1 className="text-6xl font-extrabold text-gray-900">
-              Your Health, Our Priority at <span className="text-sky-500">InsightCare</span>
+        <section className="container flex flex-col items-center px-6 py-24 text-center lg:flex-row lg:text-left">
+          <div className="flex-1 space-y-6">
+            <h1 className="text-5xl font-extrabold text-gray-900">
+              Your Health, Our Priority at <span className="text-[#2892D7]">InsightCare</span>
             </h1>
             <p className="max-w-2xl text-xl text-gray-500">
               Experience AI-powered healthcare with seamless appointments, instant insights, and personalized care.
@@ -123,8 +123,8 @@ export default async function Home() {
             {!userId && (
               <div className="flex flex-wrap justify-center gap-6 lg:justify-start">
                 <Link href="/sign-up">
-                  <Button size="lg" className="text-white bg-sky-500 hover:bg-sky-700">
-                    Register as Patient <ArrowRight className="w-5 h-5 ml-2" />
+                  <Button size="lg" className="bg-[#2892D7] text-white hover:bg-gray-900">
+                    Register as Patient <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </Link>
                 <Link href="/sign-in">
@@ -166,11 +166,9 @@ export default async function Home() {
             ].map(({ icon: Icon, title, desc }, index) => (
               <Card key={index} className="p-8 transition-all duration-300 border-none shadow-lg hover:shadow-xl hover:scale-105 bg-gradient-to-br from-sky-50 to-white">
                 <CardHeader>
-                  <div className="p-3 rounded-lg bg-sky-100 w-fit">
-                    <Icon className="w-8 h-8 text-sky-500" />
-                  </div>
-                  <CardTitle className="mt-6 text-xl font-bold text-gray-900">{title}</CardTitle>
-                  <CardDescription className="mt-2 text-base text-gray-500">{desc}</CardDescription>
+                  <Icon className="h-10 w-10 text-[#2892D7]" />
+                  <CardTitle className="text-lg font-bold text-gray-900">{title}</CardTitle>
+                  <CardDescription className="text-gray-600">{desc}</CardDescription>
                 </CardHeader>
               </Card>
             ))}
@@ -178,29 +176,26 @@ export default async function Home() {
         </section>
 
         {/* CTA Section */}
-        <section className="container px-6 py-24">
-          <div className="relative px-12 py-24 text-center shadow-xl rounded-2xl bg-gradient-to-r from-sky-500 to-sky-700">
-            <div className="absolute inset-0 bg-white/5 rounded-2xl backdrop-blur-3xl"></div>
-            <div className="relative">
-              <h2 className="text-4xl font-bold text-white">Ready to Take Control of Your Health?</h2>
-              <p className="max-w-xl mx-auto mt-6 text-lg text-sky-100">
-                Join thousands who trust InsightCare for their healthcare needs.
-              </p>
-              {!userId && (
-                <div className="flex flex-wrap justify-center gap-6 mt-8">
-                  <Link href="/sign-up">
-                    <Button className="bg-white text-sky-500 hover:bg-sky-50">
-                      Get Started Now <ArrowRight className="w-5 h-5 ml-2" />
-                    </Button>
-                  </Link>
-                  <Link href="/sign-in">
-                    <Button variant="outline" className="text-white border-white hover:bg-white hover:text-sky-500">
-                      Learn More
-                    </Button>
-                  </Link>
-                </div>
-              )}
-            </div>
+        <section className="container px-6 py-20">
+          <div className="relative bg-[#2892D7] px-8 py-20 text-white rounded-lg shadow-xl text-center">
+            <h2 className="text-4xl font-bold">Ready to Take Control of Your Health?</h2>
+            <p className="max-w-xl mx-auto mt-4 text-white/80">
+              Join thousands who trust InsightCare for their healthcare needs.
+            </p>
+            {!userId && (
+              <div className="flex flex-wrap justify-center gap-4 mt-6">
+                <Link href="/sign-up">
+                  <Button className="bg-white text-[#2892D7] hover:bg-gray-100">
+                    Get Started Now <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </Link>
+                <Link href="/sign-in">
+                  <Button variant="outline" className="text-white border-white hover:bg-white hover:text-rose-600">
+                    Learn More
+                  </Button>
+                </Link>
+              </div>
+            )}
           </div>
         </section>
       </main>
