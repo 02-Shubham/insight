@@ -74,9 +74,14 @@ const PatientProfile = async (props: ParamsProps) => {
             </div>
 
             <div className="flex flex-col md:flex-row md:flex-wrap md:items-center xl:justify-between gap-y-4 md:gap-x-0">
-              <SmallCard label="Marital Status" value={data?.marital_status!} />
               <SmallCard label="Blood Group" value={data?.blood_group!} />
-              <SmallCard label="Address" value={data?.address!} />
+              <SmallCard label="Oxygen Saturation" value="97%" />
+              <SmallCard label="Respiratory Rate" value="24 bpm" />
+              <SmallCard label="Heart Rate" value="71 bpm" />
+              <SmallCard label="Blood Pressure" value="120/80" />
+              <SmallCard label="Body Temperature" value="98.6°F" />
+
+
             </div>
 
             <div className="flex flex-col md:flex-row md:flex-wrap md:items-center xl:justify-between gap-y-4 md:gap-x-0">
