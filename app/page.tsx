@@ -90,8 +90,8 @@ export default async function Home() {
       <header className="border-b bg-white shadow-sm">
         <div className="container flex h-16 items-center justify-between px-6">
           <div className="flex items-center gap-2">
-            <Heart className="h-6 w-6 text-[#2892D7]" />
-            <span className="text-[#2892D7] text-xl font-extrabold text-gray-900">InsightCare</span>
+            <ClipboardPlus className="h-6 w-6 text-[#2892D7]" />
+            <span className="text-[#2892D7] text-xl font-extrabold">InsightCare</span>
           </div>
           {userId ? (
             <Link href={`/${role}`}>

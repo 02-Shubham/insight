@@ -13,6 +13,7 @@ import {
   User,
   UserRound,
   Users,
+  ClipboardPlus,
   UsersRound,
 } from "lucide-react";
 import Link from "next/link";
@@ -165,7 +166,7 @@ export const Sidebar = async () => {
       <div className="">
         <div className="flex items-center justify-center lg:justify-start gap-2">
           <div className="p-1.5 rounded-md bg-blue-600 text-white">
-            <SquareActivity size={22} />
+            <ClipboardPlus size={22} />
           </div>
           <Link
             href={"/"}
