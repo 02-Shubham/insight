@@ -31,28 +31,28 @@ const PatientProfile = async (props: ParamsProps) => {
   const SmallCard = ({ label, value }: { label: string; value: string }) => (
     <div className="w-full md:w-1/3">
       <span className="text-sm text-gray-500">{label}</span>
-      <p className="text-sm md:text-base capitalize">{value}</p>
+      <p className="text-sm capitalize md:text-base">{value}</p>
     </div>
   );
 
   return (
-    <div className="bg-gray-100/60 h-full rounded-xl py-6 px-3 2xl:p-6 flex flex-col lg:flex-row gap-6">
+    <div className="flex flex-col h-full gap-6 px-3 py-6 bg-gray-100/60 rounded-xl 2xl:p-6 lg:flex-row">
       <div className="w-full xl:w-3/4">
-        <div className="w-full flex flex-col lg:flex-row gap-4">
+        <div className="flex flex-col w-full gap-4 lg:flex-row">
           <Card className="bg-white rounded-xl p-4 w-full lg:w-[30%] border-none flex flex-col items-center">
             <ProfileImage
               url={data?.img!}
               name={data?.first_name + " " + data?.last_name}
-              className="h-20 w-20 md:flex"
+              className="w-20 h-20 md:flex"
               bgColor={data?.colorCode!}
               textClassName="text-3xl"
             />
-            <h1 className="font-semibold text-2xl mt-2">
+            <h1 className="mt-2 text-2xl font-semibold">
               {data?.first_name + " " + data?.last_name}
             </h1>
             <span className="text-sm text-gray-500">{data?.email}</span>
 
-            <div className="w-full flex items-center justify-center gap-2 mt-4">
+            <div className="flex items-center justify-center w-full gap-2 mt-4">
               <div className="w-1/2 space-y-1 text-center">
                 <p className="text-xl font-medium">{data?.totalAppointments}</p>
                 <span className="text-xs text-gray-500">Appointments</span>
@@ -110,10 +110,10 @@ const PatientProfile = async (props: ParamsProps) => {
       </div>
 
       <div className="w-full xl:w-1/3">
-        <div className="bg-white p-4 rounded-md mb-8">
+        <div className="p-4 mb-8 bg-white rounded-md">
           <h1 className="text-xl font-semibold">Quick Links</h1>
 
-          <div className="mt-4 flex gap-4 flex-wrap text-xs text-gray-500">
+          <div className="flex flex-wrap gap-4 mt-4 text-xs text-gray-500">
             <Link
               className="p-3 rounded-md bg-yellow-50 hover:underline"
               href={`/record/appointments?id=${id}`}

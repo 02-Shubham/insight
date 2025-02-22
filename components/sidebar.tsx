@@ -14,6 +14,11 @@ import {
   UserRound,
   Users,
   UsersRound,
+  Brain,
+  Activity,
+  Sparkles,
+  HeartPulse,
+  Microscope,
 } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -121,18 +126,11 @@ export const Sidebar = async () => {
           access: ["patient"],
           icon: List,
         },
-        {
-          name: "Prescription",
-          href: "#",
-          access: ["patient"],
-          icon: Pill,
-        },
-        {
-          name: "Billing",
-          href: "/patient/self?cat=payments",
-          access: ["patient"],
-          icon: Receipt,
-        },
+        { name: 'Image Diagnosis Assistant', href: 'http://localhost:8501/',access: ACCESS_LEVELS_ALL, icon: Brain },
+        { name: 'ECG Interpreter', href: 'http://localhost:8502/',access: ACCESS_LEVELS_ALL, icon: HeartPulse },
+        { name: 'Report Analyzer', href: 'http://localhost:8503/',access: ACCESS_LEVELS_ALL, icon: Activity },
+        { name: 'Treatment Planner', href: '/ai/treatment',access: ACCESS_LEVELS_ALL, icon: Sparkles },
+        { name: 'Predictive Model', href: 'http://localhost:8504/',access: ACCESS_LEVELS_ALL, icon: Microscope },
       ],
     },
     {
@@ -161,15 +159,15 @@ export const Sidebar = async () => {
   ];
 
   return (
-    <div className="w-full p-4 flex flex-col justify-between gap-4 bg-white overflow-y-scroll min-h-full">
+    <div className="flex flex-col justify-between w-full min-h-full p-4 overflow-y-scroll bg-white gap-9">
       <div className="">
-        <div className="flex items-center justify-center lg:justify-start gap-2">
+        <div className="flex items-center justify-center gap-2 lg:justify-start">
           <div className="p-1.5 rounded-md bg-blue-600 text-white">
             <SquareActivity size={22} />
           </div>
           <Link
             href={"/"}
-            className="hidden lg:flex text-base 2xl:text-xl font-bold"
+            className="hidden text-base font-bold lg:flex 2xl:text-xl"
           >
             InsightCare
           </Link>
@@ -178,7 +176,7 @@ export const Sidebar = async () => {
         <div className="mt-4 text-sm">
           {SIDEBAR_LINKS.map((el) => (
             <div key={el.label} className="flex flex-col gap-2">
-              <span className="hidden uppercase lg:block text-gray-400 font-bold my-4">
+              <span className="hidden my-4 text-xl font-bold text-gray-700 uppercase lg:block">
                 {el.label}
               </span>
 
@@ -187,7 +185,7 @@ export const Sidebar = async () => {
                   return (
                     <Link
                       href={link.href}
-                      className="flex items-center justify-center lg:justify-start gap-4 text-gray-500 py-2 md:px-2 rounded-md hover:bg-blue-600/10"
+                      className="flex items-center justify-center gap-4 py-2 text-black rounded-xl lg:justify-start md:px-2 hover:bg-blue-600/10"
                       key={link.name}
                     >
                       <SidebarIcon icon={link.icon} />

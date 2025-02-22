@@ -14,17 +14,17 @@
 
 //   return (
 //     <div className="flex flex-col items-center justify-center h-screen p-6">
-//       <div className="flex-1 flex flex-col items-center justify-center">
+//       <div className="flex flex-col items-center justify-center flex-1">
 //         <div className="mb-8">
-//           <h1 className="text-4xl md:text-5xl font-bold text-center">
+//           <h1 className="text-4xl font-bold text-center md:text-5xl">
 //             Welcome to <br />
-//             <span className="text-blue-700 text-5xl md:text-6xl">
+//             <span className="text-5xl text-blue-700 md:text-6xl">
 //               InsightCare
 //             </span>
 //           </h1>
 //         </div>
 
-//         <div className="text-center max-w-xl flex flex-col items-center justify-center">
+//         <div className="flex flex-col items-center justify-center max-w-xl text-center">
 //           <p className="mb-8">
 //             Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse maxime
 //             quae numquam possimus dolor. Illum, ipsam laudantium. Reprehenderit
@@ -41,7 +41,7 @@
 //             ) : (
 //               <>
 //                 <Link href="/sign-up">
-//                   <Button className="md:text-base font-light">
+//                   <Button className="font-light md:text-base">
 //                     New Patient
 //                   </Button>
 //                 </Link>
@@ -49,7 +49,7 @@
 //                 <Link href="/sign-in">
 //                   <Button
 //                     variant="outline"
-//                     className="md:text-base underline hover:text-nlue-600"
+//                     className="underline md:text-base hover:text-nlue-500"
 //                   >
 //                     Login to account
 //                   </Button>
@@ -60,7 +60,7 @@
 //         </div>
 //       </div>
 //       <footer className="mt-8">
-//         <p className="text-center text-sm">
+//         <p className="text-sm text-center">
 //           &copy; 2025 Insight Hospital Management System. All rights reserved.
 //         </p>
 //       </footer>
@@ -86,24 +86,24 @@ export default async function Home() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-gray-50">
-      <header className="border-b bg-white shadow-sm">
-        <div className="container flex h-16 items-center justify-between px-6">
-          <div className="flex items-center gap-2">
-            <Heart className="h-6 w-6 text-rose-600" />
-            <span className="text-xl font-extrabold text-gray-900">InsightCare</span>
+    <div className="flex flex-col min-h-screen bg-sky-50">
+      <header className="bg-white border-b shadow-sm">
+        <div className="container flex items-center justify-between h-20 px-6">
+          <div className="flex items-center gap-3">
+            <Heart className="w-7 h-7 text-sky-500" />
+            <span className="text-2xl font-extrabold text-gray-900">InsightCare</span>
           </div>
           {userId ? (
             <Link href={`/${role}`}>
-              <Button>View Dashboard</Button>
+              <Button className="bg-sky-500 hover:bg-sky-700">View Dashboard</Button>
             </Link>
           ) : (
             <div className="flex items-center gap-4">
               <Link href="/sign-in">
-                <Button variant="ghost" className="hover:text-rose-600">Sign In</Button>
+                <Button variant="ghost" className="hover:text-sky-500">Sign In</Button>
               </Link>
               <Link href="/sign-up">
-                <Button className="bg-rose-600 text-white hover:bg-rose-700">Get Started</Button>
+                <Button className="text-white bg-sky-500 hover:bg-sky-700">Get Started</Button>
               </Link>
             </div>
           )}
@@ -112,59 +112,65 @@ export default async function Home() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="container flex flex-col items-center px-6 py-24 text-center lg:flex-row lg:text-left">
-          <div className="flex-1 space-y-6">
-            <h1 className="text-5xl font-extrabold text-gray-900">
-              Your Health, Our Priority at <span className="text-rose-600">InsightCare</span>
+        <section className="container flex flex-col items-center px-6 py-32 text-center lg:flex-row lg:text-left bg-gradient-to-b from-sky-50 to-white">
+          <div className="flex-1 space-y-8">
+            <h1 className="text-6xl font-extrabold text-gray-900">
+              Your Health, Our Priority at <span className="text-sky-500">InsightCare</span>
             </h1>
-            <p className="max-w-2xl text-lg text-gray-600">
+            <p className="max-w-2xl text-xl text-gray-500">
               Experience AI-powered healthcare with seamless appointments, instant insights, and personalized care.
             </p>
             {!userId && (
-              <div className="flex flex-wrap justify-center gap-4 lg:justify-start">
+              <div className="flex flex-wrap justify-center gap-6 lg:justify-start">
                 <Link href="/sign-up">
-                  <Button size="lg" className="bg-rose-600 text-white hover:bg-rose-700">
-                    Register as Patient <ArrowRight className="ml-2 h-4 w-4" />
+                  <Button size="lg" className="text-white bg-sky-500 hover:bg-sky-700">
+                    Register as Patient <ArrowRight className="w-5 h-5 ml-2" />
                   </Button>
                 </Link>
                 <Link href="/sign-in">
-                  <Button size="lg" variant="outline" className="border-gray-300 text-gray-900 hover:bg-gray-100">
+                  <Button size="lg" variant="outline" className="text-gray-900 border-gray-300 hover:bg-sky-50">
                     Login to Account
                   </Button>
                 </Link>
               </div>
             )}
           </div>
-          <div className="hidden lg:block">
-            <Image
-              src="/onboarding-img.png"
-              alt="Medical Illustration"
-              width={550}
-              height={400}
-              className="rounded-lg shadow-lg"
-              priority
-            />
+          <div className="hidden lg:block lg:ml-12">
+            <div className="relative">
+              <div className="absolute inset-0 rounded-full bg-sky-200 blur-3xl opacity-20"></div>
+              <Image
+                src="/onboarding-img.png"
+                alt="Medical Illustration"
+                width={500}
+                height={450}
+                className="relative shadow-xl rounded-2xl"
+                priority
+              />
+            </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="container px-6 py-20">
+        <section className="container px-6 py-24 bg-white">
           <div className="text-center">
             <h2 className="text-4xl font-extrabold text-gray-900">Why Choose InsightCare?</h2>
-            <p className="mt-4 max-w-2xl mx-auto text-gray-600">
+            <p className="max-w-2xl mx-auto mt-6 text-lg text-gray-500">
               Experience the future of healthcare with AI-driven features designed for your convenience.
             </p>
           </div>
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {[{ icon: Stethoscope, title: "AI Diagnostics", desc: "Get instant health assessments powered by AI." },
+          <div className="grid gap-8 mt-16 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { icon: Stethoscope, title: "AI Diagnostics", desc: "Get instant health assessments powered by AI." },
               { icon: Users, title: "Easy Appointments", desc: "Schedule & manage appointments with ease." },
               { icon: Shield, title: "Secure Records", desc: "Your medical data is safe & always accessible." }
             ].map(({ icon: Icon, title, desc }, index) => (
-              <Card key={index} className="p-6 shadow-md hover:shadow-lg transition">
+              <Card key={index} className="p-8 transition-all duration-300 border-none shadow-lg hover:shadow-xl hover:scale-105 bg-gradient-to-br from-sky-50 to-white">
                 <CardHeader>
-                  <Icon className="h-10 w-10 text-rose-600" />
-                  <CardTitle className="text-lg font-bold text-gray-900">{title}</CardTitle>
-                  <CardDescription className="text-gray-600">{desc}</CardDescription>
+                  <div className="p-3 rounded-lg bg-sky-100 w-fit">
+                    <Icon className="w-8 h-8 text-sky-500" />
+                  </div>
+                  <CardTitle className="mt-6 text-xl font-bold text-gray-900">{title}</CardTitle>
+                  <CardDescription className="mt-2 text-base text-gray-500">{desc}</CardDescription>
                 </CardHeader>
               </Card>
             ))}
@@ -172,36 +178,38 @@ export default async function Home() {
         </section>
 
         {/* CTA Section */}
-        <section className="container px-6 py-20">
-          <div className="relative bg-rose-600 px-8 py-20 text-white rounded-lg shadow-xl text-center">
-            <h2 className="text-4xl font-bold">Ready to Take Control of Your Health?</h2>
-            <p className="mt-4 max-w-xl mx-auto text-white/80">
-              Join thousands who trust InsightCare for their healthcare needs.
-            </p>
-            {!userId && (
-              <div className="mt-6 flex flex-wrap justify-center gap-4">
-                <Link href="/sign-up">
-                  <Button className="bg-white text-rose-600 hover:bg-gray-100">
-                    Get Started Now <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-                <Link href="/sign-in">
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-rose-600">
-                    Learn More
-                  </Button>
-                </Link>
-              </div>
-            )}
+        <section className="container px-6 py-24">
+          <div className="relative px-12 py-24 text-center shadow-xl rounded-2xl bg-gradient-to-r from-sky-500 to-sky-700">
+            <div className="absolute inset-0 bg-white/5 rounded-2xl backdrop-blur-3xl"></div>
+            <div className="relative">
+              <h2 className="text-4xl font-bold text-white">Ready to Take Control of Your Health?</h2>
+              <p className="max-w-xl mx-auto mt-6 text-lg text-sky-100">
+                Join thousands who trust InsightCare for their healthcare needs.
+              </p>
+              {!userId && (
+                <div className="flex flex-wrap justify-center gap-6 mt-8">
+                  <Link href="/sign-up">
+                    <Button className="bg-white text-sky-500 hover:bg-sky-50">
+                      Get Started Now <ArrowRight className="w-5 h-5 ml-2" />
+                    </Button>
+                  </Link>
+                  <Link href="/sign-in">
+                    <Button variant="outline" className="text-white border-white hover:bg-white hover:text-sky-500">
+                      Learn More
+                    </Button>
+                  </Link>
+                </div>
+              )}
+            </div>
           </div>
         </section>
       </main>
 
-      <footer className="border-t bg-white py-6 text-center">
+      <footer className="py-8 text-center bg-white border-t">
         <p className="text-sm text-gray-500">© {new Date().getFullYear()} InsightCare. All rights reserved.</p>
       </footer>
     </div>
   )
 }
-
 
 
