@@ -41,8 +41,8 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
         <div className="absolute top-0 left-0 w-full border-b bg-white/80 backdrop-blur-sm">
           <div className="container flex h-16 items-center px-4">
             <Link href="/" className="flex items-center gap-2">
-              <ClipboardPlus className="h-6 w-6 text-rose-600" />
-              <span className="text-xl font-bold">InsightCare</span>
+              <Heart className="h-6 w-6 text-[#2892D7]" />
+              <span className="text-[#2892D7] text-xl font-bold">InsightCare</span>
             </Link>
           </div>
         </div>
@@ -70,7 +70,7 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
       <div className="relative hidden md:block">
         {/* Background Image */}
         <Image
-          src="/onboarding-img.png"
+          src="/doctorBG.jpg"
           alt="Healthcare Professionals"
           className="h-full w-full object-cover"
           width={1000}
@@ -86,26 +86,26 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
               <div className="absolute -top-12 left-1/2 h-24 w-24 -translate-x-1/2 rounded-full bg-rose-600/20 blur-2xl" />
 
               {/* Logo */}
-              <ClipboardPlus className="mx-auto h-12 w-12 text-rose-500" />
+              <Heart className="mx-auto h-12 w-12 text-[#2892D7]" />
 
               {/* Text */}
               <h1 className="relative text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
                 InsightCare
               </h1>
-              <p className="relative text-lg text-rose-200">Your Health, Our Priority</p>
+              <p className="relative text-lg text-[#2892D7]">Your Health, Our Priority</p>
 
               {/* Feature List */}
               <div className="relative mt-8 space-y-4 text-left text-sm text-white/80">
                 <p className="flex items-center space-x-2">
-                  <span className="h-1 w-1 rounded-full bg-rose-400" />
+                  <span className="h-1 w-1 rounded-full bg-[#2892D7]" />
                   <span>AI-Powered Healthcare Management</span>
                 </p>
                 <p className="flex items-center space-x-2">
-                  <span className="h-1 w-1 rounded-full bg-rose-400" />
+                  <span className="h-1 w-1 rounded-full bg-[#2892D7]" />
                   <span>Secure Patient Records</span>
                 </p>
                 <p className="flex items-center space-x-2">
-                  <span className="h-1 w-1 rounded-full bg-rose-400" />
+                  <span className="h-1 w-1 rounded-full bg-[#2892D7]" />
                   <span>Seamless Appointment Scheduling</span>
                 </p>
               </div>
