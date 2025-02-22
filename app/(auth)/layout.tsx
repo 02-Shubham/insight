@@ -42,7 +42,7 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
         <div className="absolute top-0 left-0 w-full border-b bg-white/80 backdrop-blur-sm">
           <div className="container flex items-center h-16 px-4">
             <Link href="/" className="flex items-center gap-2">
-              <Heart className="h-6 w-6 text-[#2892D7]" />
+              <ClipboardPlus className="h-6 w-6 text-[#2892D7]" />
               <span className="text-[#2892D7] text-xl font-bold">InsightCare</span>
             </Link>
           </div>
@@ -87,7 +87,7 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
               <div className="absolute w-24 h-24 -translate-x-1/2 rounded-full -top-12 left-1/2 bg-rose-600/20 blur-2xl" />
 
               {/* Logo */}
-              <Heart className="mx-auto h-12 w-12 text-[#2892D7]" />
+              <ClipboardPlus className="mx-auto h-12 w-12 text-[#2892D7]" />
 
               {/* Text */}
               <h1 className="relative text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">

@@ -13,6 +13,7 @@ import {
   User,
   UserRound,
   Users,
+  ClipboardPlus,
   UsersRound,
   Brain,
   Activity,
@@ -163,7 +164,7 @@ export const Sidebar = async () => {
       <div className="">
         <div className="flex items-center justify-center gap-2 lg:justify-start">
           <div className="p-1.5 rounded-md bg-blue-600 text-white">
-            <SquareActivity size={22} />
+            <ClipboardPlus size={22} />
           </div>
           <Link
             href={"/"}
