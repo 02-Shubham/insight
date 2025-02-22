@@ -76,6 +76,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { getRole } from "@/utils/roles"
 import { auth } from "@clerk/nextjs/server"
 import { redirect } from "next/navigation"
+import { Heart } from "lucide-react"
 
 export default async function Home() {
   const { userId } = await auth()
