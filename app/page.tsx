@@ -91,7 +91,7 @@ export default async function Home() {
       <header className="bg-white border-b shadow-sm">
         <div className="container flex items-center justify-between h-16 px-6">
           <div className="flex items-center gap-2">
-            <ClipboardPlus className="h-6 w-6 text-[#2892D7]" />
+            <ClipboardPlus className="h-8 w-6 text-[#2892D7]" />
             <span className="text-[#2892D7] text-xl font-extrabold">InsightCare</span>
           </div>
           {userId ? (
@@ -140,7 +140,7 @@ export default async function Home() {
             <div className="relative">
               <div className="absolute inset-0 rounded-full bg-sky-200 blur-3xl opacity-20"></div>
               <Image
-                src="/onboarding-img.png"
+                src="/doctorlogo.png"
                 alt="Medical Illustration"
                 width={500}
                 height={450}
