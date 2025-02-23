@@ -79,38 +79,36 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
         />
 
         {/* Overlay Content */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-black/30">
-          <div className="flex flex-col items-center justify-center h-full p-8">
-            <div className="relative space-y-4 text-center">
-              {/* Decorative Element */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/30">
+          {/* <div className="flex flex-col items-center justify-center h-full p-8">
+            <div className="relative space-y-4  text-center">
               <div className="absolute w-24 h-24 -translate-x-1/2 rounded-full -top-12 left-1/2 bg-rose-600/20 blur-2xl" />
 
-              {/* Logo */}
               <ClipboardPlus className="mx-auto h-12 w-12 text-[#2892D7]" />
 
-              {/* Text */}
-              <h1 className="relative text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
+             
+              <h1 className="relative text-6xl text-shadow-md font-bold text-shadow-md tracking-tight text-white sm:text-4xl md:text-5xl">
                 InsightCare
               </h1>
-              <p className="relative text-lg text-[#2892D7]">Your Health, Our Priority</p>
+              <p className="relative text-3xl text-shadow-md font-bold text-[#2892D7]">Your Health, Our Priority</p>
 
-              {/* Feature List */}
+              
               <div className="relative mt-8 space-y-4 text-sm text-left text-white/80">
-                <p className="flex items-center space-x-2">
+                <p className="flex text-xl items-center space-x-2">
                   <span className="h-1 w-1 rounded-full bg-[#2892D7]" />
                   <span>AI-Powered Healthcare Management</span>
                 </p>
-                <p className="flex items-center space-x-2">
+                <p className="flex text-xl items-center space-x-2">
                   <span className="h-1 w-1 rounded-full bg-[#2892D7]" />
                   <span>Secure Patient Records</span>
                 </p>
-                <p className="flex items-center space-x-2">
+                <p className="flex text-xl items-center space-x-2">
                   <span className="h-1 w-1 rounded-full bg-[#2892D7]" />
                   <span>Seamless Appointment Scheduling</span>
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Decorative Gradient */}

@@ -130,7 +130,7 @@ export default async function Home() {
                 </Link>
                 <Link href="/sign-in">
                   <Button size="lg" variant="outline" className="text-gray-900 border-gray-300 hover:bg-sky-50">
-                    Login to Account
+                    Login as Doctor
                   </Button>
                 </Link>
               </div>
@@ -191,7 +191,7 @@ export default async function Home() {
                   </Button>
                 </Link>
                 <Link href="/sign-in">
-                  <Button variant="outline" className="text-white border-white hover:bg-white hover:text-rose-600">
+                  <Button variant="outline" className="text-blue-500 border-white hover:bg-white hover:text-rose-600">
                     Learn More
                   </Button>
                 </Link>
