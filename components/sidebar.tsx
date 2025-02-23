@@ -59,6 +59,16 @@ export const Sidebar = async () => {
       ],
     },
     {
+      label:"Analysis Tools",
+      links:[
+        { name: 'Image Diagnosis Assistant', href: 'http://localhost:8504/',access: ACCESS_LEVELS_ALL, icon: Brain },
+        { name: 'ECG Interpreter', href: 'http://localhost:8503/',access: ACCESS_LEVELS_ALL, icon: HeartPulse },
+        { name: 'Report Analyzer', href: 'http://localhost:8501/',access: ACCESS_LEVELS_ALL, icon: Activity },
+        
+        { name: 'Predictive Model', href: 'http://localhost:8502/',access: ACCESS_LEVELS_ALL, icon: Microscope },
+      ]
+    },
+    {
       label: "Manage",
       links: [
         {
@@ -97,12 +107,7 @@ export const Sidebar = async () => {
           access: ["admin", "doctor", "nurse"],
           icon: SquareActivity,
         },
-        {
-          name: "Billing Overview",
-          href: "/record/billing",
-          access: ["admin", "doctor"],
-          icon: Receipt,
-        },
+        
         {
           name: "Patient Management",
           href: "/nurse/patient-management",
@@ -129,16 +134,7 @@ export const Sidebar = async () => {
         },
       ],
     },
-    {
-      label:"Analysis Tools",
-      links:[
-        { name: 'Image Diagnosis Assistant', href: 'http://localhost:8501/',access: ACCESS_LEVELS_ALL, icon: Brain },
-        { name: 'ECG Interpreter', href: 'http://localhost:8502/',access: ACCESS_LEVELS_ALL, icon: HeartPulse },
-        { name: 'Report Analyzer', href: 'http://localhost:8503/',access: ACCESS_LEVELS_ALL, icon: Activity },
-        { name: 'Treatment Planner', href: '/ai/treatment',access: ACCESS_LEVELS_ALL, icon: Sparkles },
-        { name: 'Predictive Model', href: 'http://localhost:8504/',access: ACCESS_LEVELS_ALL, icon: Microscope },
-      ]
-    },
+
     {
       label: "System",
       links: [
