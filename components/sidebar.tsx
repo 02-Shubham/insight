@@ -64,7 +64,7 @@ export const Sidebar = async () => {
         { name: 'Image Diagnosis Assistant', href: 'http://172.16.248.206:8504/',access: ACCESS_LEVELS_ALL, icon: Brain },
         { name: 'ECG Interpreter', href: 'http://172.16.248.206:8503/',access: ACCESS_LEVELS_ALL, icon: HeartPulse },
         { name: 'Report Analyzer', href: 'http://172.16.248.206:8501/',access: ACCESS_LEVELS_ALL, icon: Activity },
-        
+        { name: 'Treatment planner Bot', href: 'http://172.16.248.206:8505/',access: ACCESS_LEVELS_ALL, icon: Brain },
         { name: 'Predictive Model', href: 'http://172.16.248.206t:8502/',access: ACCESS_LEVELS_ALL, icon: Microscope },
       ]
     },
