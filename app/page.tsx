@@ -116,7 +116,7 @@ export default async function Home() {
         <section className="container flex flex-col bg-gradient-to-t from-slate-50 to-cyan-300 items-center px-6 py-24 text-center lg:flex-row lg:text-left">
           <div className="flex-1 space-y-6">
             <h1 className="text-5xl font-extrabold text-gray-900">
-              Your Health, Our Priority at <span className="text-[#2892D7]">InsightCare</span>
+              Your Health, Our Priority at <span className="text-[#2892D7]">InsightCare </span>
             </h1>
             <p className="max-w-2xl text-xl text-gray-500">
               Experience AI-powered healthcare with seamless appointments, instant insights, and personalized care.
