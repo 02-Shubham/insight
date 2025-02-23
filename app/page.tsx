@@ -92,7 +92,7 @@ export default async function Home() {
         <div className="container flex items-center justify-between h-16 px-6">
           <div className="flex items-center gap-2">
             <ClipboardPlus className="h-6 w-6 text-[#2892D7]" />
-            <span className="text-[#2892D7] text-xl font-extrabold text-gray-900">InsightCare</span>
+            <span className="text-[#2892D7] text-xl font-extrabold">InsightCare</span>
           </div>
           {userId ? (
             <Link href={`/${role}`}>
@@ -113,7 +113,7 @@ export default async function Home() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="container flex flex-col items-center px-6 py-24 text-center lg:flex-row lg:text-left">
+        <section className="container flex flex-col bg-gradient-to-t from-slate-50 to-cyan-300 items-center px-6 py-24 text-center lg:flex-row lg:text-left">
           <div className="flex-1 space-y-6">
             <h1 className="text-5xl font-extrabold text-gray-900">
               Your Health, Our Priority at <span className="text-[#2892D7]">InsightCare</span>
