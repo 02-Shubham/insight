@@ -127,12 +127,17 @@ export const Sidebar = async () => {
           access: ["patient"],
           icon: List,
         },
+      ],
+    },
+    {
+      label:"Analysis Tools",
+      links:[
         { name: 'Image Diagnosis Assistant', href: 'http://localhost:8501/',access: ACCESS_LEVELS_ALL, icon: Brain },
         { name: 'ECG Interpreter', href: 'http://localhost:8502/',access: ACCESS_LEVELS_ALL, icon: HeartPulse },
         { name: 'Report Analyzer', href: 'http://localhost:8503/',access: ACCESS_LEVELS_ALL, icon: Activity },
         { name: 'Treatment Planner', href: '/ai/treatment',access: ACCESS_LEVELS_ALL, icon: Sparkles },
         { name: 'Predictive Model', href: 'http://localhost:8504/',access: ACCESS_LEVELS_ALL, icon: Microscope },
-      ],
+      ]
     },
     {
       label: "System",
