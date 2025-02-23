@@ -73,13 +73,29 @@ const PatientProfile = async (props: ParamsProps) => {
               <SmallCard label={"Phone Number"} value={data?.phone!} />
             </div>
 
-            <div className="flex flex-col md:flex-row md:flex-wrap md:items-center xl:justify-between gap-y-4 md:gap-x-0">
-              <SmallCard label="Blood Group" value={data?.blood_group!} />
-              <SmallCard label="Oxygen Saturation" value="97%" />
-              <SmallCard label="Respiratory Rate" value="24 bpm" />
-              <SmallCard label="Heart Rate" value="71 bpm" />
-              <SmallCard label="Blood Pressure" value="120/80" />
-              <SmallCard label="Body Temperature" value="98.6°F" />
+            <div className="">
+              <div className="flex flex-col md:flex-row md:flex-wrap md:items-center xl:justify-between gap-y-4 md:gap-x-0">
+                <div className="bg-blue-200 p-2 w-32 rounded">
+                  <SmallCard label="Blood Group" value={data?.blood_group!} />
+                </div>
+                <div className="bg-green-200 p-2 w-32 rounded">
+                  <SmallCard label="Oxygen Saturation" value="97%" />
+                </div>
+                <div className="bg-yellow-200 p-2 w-32 rounded">
+                  <SmallCard label="Respiratory Rate" value="24bpm" />
+                </div>
+              </div>
+              <div className="flex flex-col md:flex-row md:flex-wrap md:items-center pt-2 xl:justify-between gap-y-4 md:gap-x-0">
+                <div className="bg-blue-200 p-2 w-32 rounded">
+                  <SmallCard label="Heart Rate" value="71bpm" />
+                </div>
+                <div className="bg-green-200 p-2 w-32 rounded">
+                  <SmallCard label="Blood Pressure" value="120/80" />
+                </div>
+                <div className="bg-yellow-200 p-2 w-32 rounded">
+                <SmallCard label="Body Temperature" value="98.6°F" />
+                </div>
+              </div>
             </div>
 
             <div className="flex flex-col md:flex-row md:flex-wrap md:items-center xl:justify-between gap-y-4 md:gap-x-0">
