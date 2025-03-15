@@ -61,11 +61,11 @@ export const Sidebar = async () => {
     {
       label:"Analysis Tools",
       links:[
-        { name: 'Image Diagnosis Assistant', href: 'http://172.16.248.206:8504/',access: ACCESS_LEVELS_ALL, icon: Brain },
-        { name: 'ECG Interpreter', href: 'http://172.16.248.206:8503/',access: ACCESS_LEVELS_ALL, icon: HeartPulse },
-        { name: 'Report Analyzer', href: 'http://172.16.248.206:8501/',access: ACCESS_LEVELS_ALL, icon: Activity },
+        { name: 'Image Diagnosis Assistant', href: 'https://imageanalysis2.streamlit.app/',access: ACCESS_LEVELS_ALL, icon: Brain },
+        { name: 'ECG Interpreter', href: 'https://ecginterpreter.streamlit.app/',access: ACCESS_LEVELS_ALL, icon: HeartPulse },
+        { name: 'Report Analyzer', href: 'https://report-analyzer.streamlit.app/',access: ACCESS_LEVELS_ALL, icon: Activity },
         
-        { name: 'Predictive Model', href: 'http://172.16.248.206t:8502/',access: ACCESS_LEVELS_ALL, icon: Microscope },
+        { name: 'Predictive Model', href: 'https://report-predictive-analysis.streamlit.app/',access: ACCESS_LEVELS_ALL, icon: Microscope },
       ]
     },
     {
